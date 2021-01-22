@@ -1,8 +1,25 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import Accordion from "./Components/Accordion";
 
-function App() {
-  return <div className="App">This is a first change</div>;
-}
-
-export default App;
+const items = [
+  {
+    title: "What is React",
+    content: "React is a front end javascript framework",
+  },
+  {
+    title: "Why use React?",
+    content: "React is a favorite JS library among engineers",
+  },
+  {
+    title: "How do you use React?",
+    content: "You use React by creating components",
+  },
+];
+// eslint-disable-next-line
+export default () => {
+  return (
+    <div>
+      <Accordion items={items} />
+    </div>
+  );
+};
