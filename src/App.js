@@ -2,6 +2,7 @@ import React from "react";
 // eslint-disable-next-line
 import Accordion from "./Components/Accordion";
 import Search from "./Components/Search";
+import Dropdown from "./Components/Dropdown";
 //  eslint-disable-next-line
 const items = [
   {
@@ -17,11 +18,26 @@ const items = [
     content: "You use React by creating components",
   },
 ];
+
+const options = [
+  {
+    label: "The Color of Red",
+    value: "red",
+  },
+  {
+    label: "The Color of Green",
+    value: "green",
+  },
+  {
+    label: "The Color of Blue",
+    value: "blue",
+  },
+];
 // eslint-disable-next-line
 export default () => {
   return (
     <div>
-      <Search />
+      <Dropdown options={options} />
     </div>
   );
 };
