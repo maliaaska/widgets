@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 const Search = () => {
-  const [term, setTerm] = useState("programming");
+  const [term, setTerm] = useState("");
   const [results, setResults] = useState([]);
 
   console.log(results);
   useEffect(() => {
-    //inside useEffect we cannot use the async function immediately, we need to create a helping function.
+    // inside useEffect we cannot use the async function immediately, we need to create a helping function.
     const search = async () => {
       const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
         params: {
@@ -19,7 +19,15 @@ const Search = () => {
       });
       setResults(data.query.search);
     };
-    search();
+    const timeoutId = setTimeout(() => {
+      if (term) {
+        search();
+      }
+    }, 500);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [term]);
 
   const renderResults = results.map((result) => {
