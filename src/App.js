@@ -2,7 +2,7 @@ import React from "react";
 // eslint-disable-next-line
 import Accordion from "./Components/Accordion";
 import Search from "./Components/Search";
-// eslint-disable-next-line
+//  eslint-disable-next-line
 const items = [
   {
     title: "What is React",
