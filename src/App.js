@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // eslint-disable-next-line
 import Accordion from "./Components/Accordion";
 import Search from "./Components/Search";
@@ -35,9 +35,14 @@ const options = [
 ];
 // eslint-disable-next-line
 export default () => {
+  const [selected, setSelected] = useState(options[0]);
   return (
     <div>
-      <Dropdown options={options} />
+      <Dropdown
+        selected={selected}
+        onSelectedChange={setSelected}
+        options={options}
+      />
     </div>
   );
 };
