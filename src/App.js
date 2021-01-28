@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Accordion from "./Components/Accordion";
 import Search from "./Components/Search";
 import Dropdown from "./Components/Dropdown";
+import Translate from "./Components/Translate";
 //  eslint-disable-next-line
 const items = [
   {
@@ -35,20 +36,9 @@ const options = [
 ];
 // eslint-disable-next-line
 export default () => {
-  const [selected, setSelected] = useState(options[0]);
-  const [showDropdown, setShowDropdown] = useState(true);
   return (
     <div>
-      <button onClick={() => setShowDropdown(!showDropdown)}>
-        Toggle Dropdown
-      </button>
-      {showDropdown ? (
-        <Dropdown
-          selected={selected}
-          onSelectedChange={setSelected}
-          options={options}
-        />
-      ) : null}
+      <Translate />
     </div>
   );
 };
