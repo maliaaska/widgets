@@ -6,7 +6,7 @@ import Dropdown from "./Components/Dropdown";
 import Translate from "./Components/Translate";
 import Route from "./Components/Route";
 import Header from "./Components/Header";
-import Link from "./Components/Link";
+
 //  eslint-disable-next-line
 const items = [
   {
