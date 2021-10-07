@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 // eslint-disable-next-line
 import Accordion from "./Components/Accordion";
 import Search from "./Components/Search";
